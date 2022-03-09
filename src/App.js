@@ -12,19 +12,19 @@ function App() {
         {
             id: 2,
             title: 'New desk (Wooden)',
-            amount: '294.67',
+            amount: '200.17',
             date: new Date(2021, 3, 18)
         },
         {
             id: 3,
             title: 'Pencil',
-            amount: '294.67',
+            amount: '140.07',
             date: new Date(2021, 5, 8)
         },
         {
             id: 4,
             title: 'Flyer',
-            amount: '294.67',
+            amount: '290.78',
             date: new Date(2021, 4, 3)
         }
     ]
