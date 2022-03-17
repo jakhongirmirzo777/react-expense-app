@@ -7,7 +7,7 @@ const FORM = {
     date: ''
 }
 
-const NewExpenseForm = () => {
+const NewExpenseForm = ({onSubmit}) => {
     const [form, setForm] = useState({...FORM})
 
     const onInputChange = (type) => {
@@ -19,7 +19,8 @@ const NewExpenseForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(form)
+        onSubmit(form)
+        setForm({...FORM})
     }
 
     return (

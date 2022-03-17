@@ -4,6 +4,13 @@ import ExpenseList from "./component/Expenses/ExpenseList";
 import NewExpense from "./component/NewExpense/NewExpense";
 
 const App = () => {
+    const onSubmit = (formData) => {
+        console.log({
+            ...formData,
+            id: Math.random().toString()
+        })
+    }
+
     const expenses = [
         {
             id: 1,
@@ -32,7 +39,7 @@ const App = () => {
     ]
     return (
         <div id="app">
-            <NewExpense/>
+            <NewExpense onSubmit={onSubmit}/>
             <ExpenseList expenses={expenses}/>
         </div>
     );
