@@ -1,8 +1,6 @@
 .expense-item {
     display: flex;
     align-items: center;
-    border-radius: 8px;
-    box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.3);
     padding: 16px;
     background-color: #474646;
     margin-bottom: 10px;

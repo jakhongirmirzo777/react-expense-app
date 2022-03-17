@@ -1,0 +1,8 @@
+.expense__list--container {
+    padding: 100px 200px;
+}
+
+.expense__list--box {
+    background-color: #2d2a2a;
+    padding: 20px;
+}
