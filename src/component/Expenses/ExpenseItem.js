@@ -3,7 +3,7 @@ import './ExpenseItem.css'
 import ExpenseDate from "./ExpenseDate";
 import VCard from "../UI/VCard";
 
-function ExpenseItem({expense}) {
+const ExpenseItem = ({expense}) => {
     return (
         <VCard className="expense-item">
             <ExpenseDate date={expense.date}/>

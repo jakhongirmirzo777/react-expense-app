@@ -3,7 +3,7 @@ import ExpenseItem from "./ExpenseItem";
 import './ExpenseList.css'
 import VCard from "../UI/VCard";
 
-function ExpenseList({expenses}) {
+const ExpenseList = ({expenses}) => {
     return (
         <div className="expense__list--container">
             <VCard className="expense__list--box">

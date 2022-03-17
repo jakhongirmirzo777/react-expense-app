@@ -2,7 +2,7 @@ import React from "react";
 import './App.css'
 import ExpenseList from "./component/Expenses/ExpenseList";
 
-function App() {
+const App = () => {
     const expenses = [
         {
             id: 1,
