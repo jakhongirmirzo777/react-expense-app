@@ -1,3 +1,4 @@
+import React from "react";
 import './VCard.css'
 
 function VCard({children, className}) {

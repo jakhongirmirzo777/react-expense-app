@@ -1,6 +1,7 @@
+import React from "react";
 import ExpenseItem from "./ExpenseItem";
 import './ExpenseList.css'
-import VCard from "./VCard";
+import VCard from "../UI/VCard";
 
 function ExpenseList({expenses}) {
     return (

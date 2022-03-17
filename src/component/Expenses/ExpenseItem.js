@@ -1,6 +1,7 @@
+import React from "react";
 import './ExpenseItem.css'
 import ExpenseDate from "./ExpenseDate";
-import VCard from "./VCard";
+import VCard from "../UI/VCard";
 
 function ExpenseItem({expense}) {
     return (
