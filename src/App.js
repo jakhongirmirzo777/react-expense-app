@@ -1,22 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import './App.css'
 import ExpenseList from "./component/Expenses/ExpenseList";
 import NewExpense from "./component/NewExpense/NewExpense";
 
 const App = () => {
-    const onSubmit = (formData) => {
-        console.log({
-            ...formData,
-            id: Math.random().toString()
-        })
-    }
-
-    const expenses = [
+    const INITIAL_EXPENSES = [
         {
             id: 1,
             title: 'Car Insurance',
             amount: '294.67',
-            date: new Date(2021, 2, 28)
+            date: new Date(2020, 2, 28)
         },
         {
             id: 2,
@@ -28,7 +21,7 @@ const App = () => {
             id: 3,
             title: 'Pencil',
             amount: '140.07',
-            date: new Date(2021, 5, 8)
+            date: new Date(2019, 5, 8)
         },
         {
             id: 4,
@@ -37,6 +30,16 @@ const App = () => {
             date: new Date(2021, 4, 3)
         }
     ]
+
+    const [expenses, setExpenses] = useState([...INITIAL_EXPENSES])
+    const onSubmit = (formData) => {
+        const expense = {
+            ...formData,
+            id: Math.random().toString(),
+            date: new Date(formData.date)
+        }
+        setExpenses((prevState) => [expense, ...prevState])
+    }
     return (
         <div id="app">
             <NewExpense onSubmit={onSubmit}/>

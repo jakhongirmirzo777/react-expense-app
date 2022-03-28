@@ -1,0 +1,17 @@
+.expense-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 40px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.expense-filter__select {
+    padding: 5px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+}
