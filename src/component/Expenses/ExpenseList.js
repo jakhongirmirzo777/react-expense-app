@@ -3,6 +3,7 @@ import ExpenseItem from "./ExpenseItem";
 import './ExpenseList.css'
 import VCard from "../UI/VCard";
 import ExpenseFilter from "./ExpenseFilter";
+import ExpensesChart from "./ExpensesChart";
 
 const ExpenseList = ({expenses}) => {
     const [filteredYear, setFilteredYear] = useState('2021')
@@ -14,9 +15,11 @@ const ExpenseList = ({expenses}) => {
         <div className="expense__list--container">
             <VCard className="expense__list--box">
                 <ExpenseFilter filteredYear={filteredYear} filterChangeHandler={filterChangeHandler}/>
+                <ExpensesChart expenses={filteredExpenses}/>
                 <div>
-                    {!filteredExpenses.length && <p className='expense__not-found'>No expenses found</p>}
-                    {filteredExpenses.length > 0 && filteredExpenses.map(expense => <ExpenseItem key={expense.id} expense={expense}/>)}
+                    {!filteredExpenses.length && <h2 className='expense__not-found'>Found no expenses!</h2>}
+                    {filteredExpenses.length > 0 && filteredExpenses.map(expense => <ExpenseItem key={expense.id}
+                                                                                                 expense={expense}/>)}
                 </div>
             </VCard>
         </div>
